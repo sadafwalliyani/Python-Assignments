@@ -1,24 +1,21 @@
-# if 5<2:
-#     pass
-# def my_function(fname):
-#   print(fname + " Refsnes")
+#AI Class-4
 
-# my_function("Emil")
-# my_function("Tobias")
-# my_function("Linus")
+print('Class-5')
+# oprand 
+# Operators
 
-# class Person:
-#   def __init__(self, name, age):
-#     self.name = name
-#     self.age = age
+print(10+5)
+print(10-5)
+print(10*5)
+print(10/5)
 
-# p1 = Person("John", 36)
 
-# print(p1.name)
-# print(p1.age)
-
-enternum = int(input("Enter Number:"))
-
-for i in range(1,10):
-        print(enternum,"*",i,"=",i*enternum)
-        
+#Pre defined functions in Python
+# print()
+# type()
+name= "Sadaf"
+print(type(name)) # data type 
+# id()
+print(id(name)) #memory address
+# len() 
+print(len(name)) #length (count number of charactors)
