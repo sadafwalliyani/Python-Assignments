@@ -35,3 +35,41 @@ Education:\tMaster
 print(data)
 print(data.expandtabs(20))
 
+#10 Find
+str="Sadaf Walliyani"
+    #012345678
+print(str.find('Wal'))
+print(str.find('S'))
+print(str.find('a'))
+print(str.find('d'))
+print(str.find('l'))
+print(str.find("a",4))
+print(str.format())
+
+#11 Format_map
+records={
+    "x": "Sadau",
+    "y": "Raju"
+}
+print("Name: {x}\nFriend: {y}".format_map(records))
+
+#12 Index
+print(str.index('d'))
+
+#13 Number in String
+str1="sadaf021"
+print(str1.isalnum())
+print(str.isalnum())
+
+#14 
+print("alpha",str1.isalpha())
+
+#15 Scii code
+print("Scii",str1.isascii())
+
+#16 Is Number
+print(str.isnumeric())
+#17 IsDigit
+num="2"
+print(num.isdigit())
+
