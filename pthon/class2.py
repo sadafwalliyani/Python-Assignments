@@ -39,3 +39,9 @@ Batch:          36-37
 """
 print(data1)
 
+# Concatination(Combine two or more variables and values)| Text formation
+first_name="Sadaf"
+father_name="Mansoor"
+batch="36-37"
+print(first_name,father_name,batch)
+
