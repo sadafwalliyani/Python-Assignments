@@ -66,3 +66,11 @@ FatherName:     {father_name}
 Batch:          {batch}
 """
 print(data4)
+
+n =input("Input Your Name:")
+f =input("Input Your FatherName:")
+b =input("Input Your Batch:")
+h =float(input("Input Height:")
+)
+
+print(n,f,b,h)
