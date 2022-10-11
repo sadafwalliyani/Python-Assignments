@@ -45,3 +45,24 @@ father_name="Mansoor"
 batch="36-37"
 print(first_name,father_name,batch)
 
+#
+data2="""
+Name:           {}
+FatherName:     {}
+Batch:          {}
+""".format( name,father_name,batch)
+
+print(data2)
+data3="""
+Name:           {1}
+FatherName:     {0}
+Batch:          {2}
+""".format( father_name,name,batch)
+print(data3)
+
+data4= f"""
+Name:           {name}
+FatherName:     {father_name}
+Batch:          {batch}
+"""
+print(data4)
