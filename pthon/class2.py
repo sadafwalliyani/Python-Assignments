@@ -67,10 +67,16 @@ Batch:          {batch}
 """
 print(data4)
 
-n =input("Input Your Name:")
-f =input("Input Your FatherName:")
-b =input("Input Your Batch:")
-h =float(input("Input Height:")
-)
+n =input("Enter Your Name:")
+f =input("Enter Your FatherName:")
+b =input("Enter Your Batch:")
+h =float(input("Enter Your Height:"))
 
-print(n,f,b,h)
+card=f"""
+PIAIC Teacher Card
+Name:           {n}
+Father's Name:  {f}
+Batch:          {b}
+Height:         {h}
+"""
+print(card)
