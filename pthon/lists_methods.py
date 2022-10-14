@@ -51,3 +51,14 @@ while i<len(names):
 numbers= list(range(1,21))
 print(numbers)
 
+num=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+print(num)
+#start:end:seq
+print(num[8:])
+print("step-1",numbers[::1])
+print("step-2",numbers[::2])
+print("step-3",numbers[::3])
+
+print(numbers[0:10:-1]) #right to left
+print(numbers[::-1]) #right to left
+print(numbers[-11:-1])
