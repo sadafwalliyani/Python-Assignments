@@ -4,6 +4,8 @@
 #tuple imutable- Unchangeable ()
 
 #List
+from ast import Num
+import numbers
 from operator import index
 from unicodedata import name
 
@@ -32,12 +34,20 @@ while i<len(names):
     print(names[i])
     i+=1
 
-s= int(input('start No:'))
-e= int(input('end No:'))
-i=s
-while i<e:
-    print(names[i])
-    i+=1
+# While Lopp
 
+# s= int(input('start No:'))
+# e= int(input('end No:'))
+# i=s
+# while i<e:
+#     print(names[i])
+#     i+=1
 
+#list[start:end:seq] 
+# Start =enclude
+#end = Exclude
+#sequence =steps
+
+numbers= list(range(1,21))
+print(numbers)
 
