@@ -62,3 +62,5 @@ print("step-3",numbers[::3])
 print(numbers[0:10:-1]) #right to left
 print(numbers[::-1]) #right to left
 print(numbers[-11:-1])
+
+

@@ -16,9 +16,14 @@
 
 # print(p1.name)
 # print(p1.age)
-
-enternum = int(input("Enter Number:"))
+print(5/2) # float
+print(5**2) #power
+print(5//2) # floor division
+print(7//2)
+print(11 % 3) # modulus
+enter_num = int(input("Enter Number:"))
 
 for i in range(1,10):
-        print(enternum,"*",i,"=",i*enternum)
+        print(enter_num,"*",i,"=",i*enter_num)
         
+
