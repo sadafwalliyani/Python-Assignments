@@ -64,3 +64,22 @@ print(numbers[::-1]) #right to left
 print(numbers[-11:-1])
 
 
+data=("""
+11:07:16 From Sadaf(174657) = Name:Sadaf(174657)
+11:08:16 From Hammad PIAIC(174650) =  Name: Hammad PIAIC(174650)
+""")
+
+for r in data.split("\n"):
+    if "=" in r:
+        d= r.split('=')
+        print(d[0].split(':')[-1])
+# print(d)
+
+data1=("""
+11:07:16 From Sadaf(174657) = Name:Sadaf(174657)
+11:08:16 From Hammad PIAIC(174650) =  Name: Hammad PIAIC(174650)
+""")
+
+# for r in data1.split('\n'):
+#     a= re.findall("PAIC\d{1,7}",r)
+#     print(a)
