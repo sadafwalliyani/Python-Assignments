@@ -128,5 +128,5 @@ for r in data3.split("\n"):#split in line
    b =re.findall("AIC-\d{1,7}",r)#print AIC and number
    result =a+b
    result=list(set([i.replace("-","") for i in result]))
-if len(result)>1 and result not in students_roll_no: students_roll_no.append(result)
-print(len(students_roll_no))
+# if len(result)>1 and result not in students_roll_no: students_roll_no.append(result)
+print(len(result))
