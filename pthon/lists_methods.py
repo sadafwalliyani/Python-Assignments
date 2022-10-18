@@ -649,5 +649,5 @@ print(students_roll_no)
 print(len(students_roll_no))
 
 
-data4= open("rawData.text")
-data4.readlines()
+# data4= open("rawData.text")
+# data4.readlines()
