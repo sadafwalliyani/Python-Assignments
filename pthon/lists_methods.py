@@ -119,7 +119,7 @@ PIAIC 185754
 09:09:07 From Syed Jawad [PIAIC185558] To Everyone : PIAIC185558
 09:09:12 From Amir Rashid To Everyone : PIAIC107890
 09:09:15 From Victor PIAIC 177535 To Everyone : PIAIC 177535
-09:09:46 From Nasir Hussain (Faculty) To Everyone : https://www.youtube.com/watch?v=PNRVcBu2xE8&list=PLbz7HMwTUM0He95be_rlxc8GyDbek6xUu
+09:09:46 From Nasir Hussain (Faculty) To Everyone : 
 """)
 students_roll_no=[]
 import re
