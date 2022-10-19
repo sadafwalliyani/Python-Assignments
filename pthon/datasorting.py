@@ -1,4 +1,6 @@
-data3=("""
+
+
+data=("""
 09:07:56 From Syed Jawad [PIAIC185558] To Everyone : distortion ari h voice me
 09:08:03 From Zeeshan Asim : PIAIC55300 To Everyone : Zeeshan Asim Khan, PIAIC55300
 09:08:15 From Syed Jawad [PIAIC185558] To Everyone : loop
@@ -544,10 +546,9 @@ meeting_saved_chat.txt
 Displaying meeting_saved_chat.txt.
 """)
 
-
 students_roll_no= []
 import re
-for r in data3.split("\n"): #split row wise
+for r in data.split("\n"): #split row wise
     # if "=" in r:
     #     d= r.split("=")
     #     # print(d[0].split(":")[-1])
@@ -558,10 +559,10 @@ for r in data3.split("\n"): #split row wise
     result= list(set([i.replace("-","") for i in result])) #replace - 
     if len(result)>=1 and result not in students_roll_no:students_roll_no.append(result)
     # print(result)
-# print(students_roll_no)
+print(students_roll_no)
 
-d= pd.DataFrame({"roll no:sorted(students_roll_no)"})
-print(len(d))
+# d= pd.DataFrame({"roll no:sorted(students_roll_no)"})
+# print(len(d))
 
 
 # data4= open("rawData.text")
