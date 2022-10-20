@@ -124,6 +124,7 @@ Displaying meeting_saved_chat.txt.
 
 students_roll_no= []
 import re
+from unicodedata import name
 import pandas as pd
 # from turtle import pd
 
@@ -141,8 +142,6 @@ for r in data.split("\n"): #split row wise
 print(len(students_roll_no))
 d= pd.DataFrame({"roll no:sorted(students_roll_no)"})
 print(d)
-
-
 # data4= open("rawData.text")
 # data4.readlines() open file 
  
@@ -153,3 +152,16 @@ print(d)
 # df = pd.DataFrame(data)
 # Print the output.
 # print(df)
+names=["sadaf","rustam","ali"]
+num=[1,2,3,4,5,6,7]
+print("the methods of string number list",dir(num))
+print("the methods of string list",dir(names)) #find the methods of string list
+print(num)
+num.clear()
+print(num)
+
+print(names)
+names.append("rubina") # add in the end of list
+print(names)
+print(sname)
+
