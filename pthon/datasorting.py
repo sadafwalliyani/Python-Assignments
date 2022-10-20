@@ -162,6 +162,36 @@ print(num)
 
 print(names)
 names.append("rubina") # add in the end of list
+sname=names.copy()
 print(names)
 print(sname)
 
+names[-1]="Muhammad Qasim"
+print(names)
+print(sname)
+#copy 
+l1=[1,2,3,4]
+l2=l1.copy()
+l1[0]="abc"
+print(l1)
+print(l2)
+# nick names examples shallow copy
+l1=[1,2,3,4]
+l2=l3=l4=l5= l1
+print(l1)
+print(l2)
+print(l3)
+print(l4)
+print(l5)
+#print same names
+
+l4[0]="ali"#deep copy
+print(l4)
+
+#extend
+list1=[1,2,3,4]
+list2=[5,4,5,6,]
+list1.extend(list2)
+print(list1)
+list1.append(list2)
+print(list1)
