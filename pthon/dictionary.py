@@ -36,3 +36,12 @@ data2={
 }
 df=pd.DataFrame(data2)
 print(df)
+
+
+# data4={}
+# 'name': ['Sadaf','Sammra','Madiha'],
+# 'fname':['Mansoor','Asif','Saeed'],
+# 'Course':['AI','ML','DS']
+
+print(4/(3*(2-1)) )
+print(4/(3*(2-1)) )
