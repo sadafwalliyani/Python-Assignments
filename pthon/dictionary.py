@@ -38,10 +38,20 @@ df=pd.DataFrame(data2)
 print(df)
 
 
-# data4={}
-# 'name': ['Sadaf','Sammra','Madiha'],
-# 'fname':['Mansoor','Asif','Saeed'],
-# 'Course':['AI','ML','DS']
+data4={}
+data4['name']= 'Sadaf Mansoor' #add key value 1
+data4['fname']= 'Mansoor' #add key value 2
+data4['Course']= 'AI' #
+data4['name']= 'Hamza'
+data4['name']= data4['name']+"AI student"
 
+print(data4['fname'])
+print(dir(data4))
+
+
+print(4/(3*(2-1)) ) #same result 
 print(4/(3*(2-1)) )
-print(4/(3*(2-1)) )
+print(4 + 3 % 5)
+print(4.00/(2.0+2.0))
+x=1
+print(x<<2) #The binary form of 1 is 0001. The expression x<<2 implies we are performing bitwise left shift on x. This shift yields the value: 0100, which is the binary form of the number 4.
