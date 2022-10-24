@@ -114,3 +114,14 @@ while code<=90:
 
 print(chr(122))
 
+# for 
+for i in [0,1,2,3,4]:
+    print(i)
+
+for i in []:
+    print(4)
+
+# for local_variable in iterated_data_type:
+#     print(statement)
+    
+# iterated_data_type = list, tuple, dictionary, sequential type
