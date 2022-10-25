@@ -125,3 +125,20 @@ for i in []:
 #     print(statement)
     
 # iterated_data_type = list, tuple, dictionary, sequential type
+
+for c in "Pakistan Zindabad":
+    print(c)
+
+sear_u = input('Enter User')
+for u in users:
+    print(u)
+    if u == sear_u:
+        break
+
+    names=[]
+    while True:
+        name = input("Enter name| Enter 'X' for exit")
+        if name == "X" or name== "x":
+            break
+        names.append(name)
+        print(names)
