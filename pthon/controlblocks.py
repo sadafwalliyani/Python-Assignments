@@ -142,3 +142,13 @@ for u in users:
             break
         names.append(name)
         print(names)
+
+names = []
+
+while True:
+    name = input("Enter name| enter 'X' for exit")
+    if "X" in name or 'x' in name:
+        break
+    names.append(name)
+    
+print(names)
