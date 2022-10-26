@@ -49,3 +49,5 @@ We love our country
 everyone can live in pakistan
 """
 print(re.findall(r"^pakistan",x))# whole variable consider signle value
+
+# ^ and $
