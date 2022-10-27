@@ -121,11 +121,6 @@ for i in [0,1,2,3,4]:
 for i in []:
     print(4)
 
-# for local_variable in iterated_data_type:
-#     print(statement)
-    
-# iterated_data_type = list, tuple, dictionary, sequential type
-
 for c in "Pakistan Zindabad":
     print(c)
 
@@ -136,12 +131,14 @@ for u in users:
         break
 
     names=[]
+
+
     while True:
         name = input("Enter name| Enter 'X' for exit")
         if name == "X" or name== "x":
             break
         names.append(name)
-        print(names)
+        # print(names)
 
 names = []
 
@@ -151,4 +148,12 @@ while True:
         break
     names.append(name)
     
-print(names)
+# print(names)
+
+names=[]
+names.append('A')
+names.append("XZ")
+names.append("A")
+names.insert(0, "Pakistan")
+# print(names)
+
