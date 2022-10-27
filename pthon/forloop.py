@@ -64,9 +64,20 @@ for row in range(1,27):
     print("")
 
 
+print([(i,j) for i in range(1,10) for j in range(65,65+i)])
+print([(i,chr(j)) for i in range(1,10) for j in range(65,65+i)])
 
-
-
+data = [[1,2,3],
+       [4,5,7],
+       [20,21,25]]
+for row in data:
+    for c in row:
+        print(c)
+        print()
+for row in data:
+    for c in row:
+        print(c, end=" ")
+        print()
 
 
       
