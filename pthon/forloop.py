@@ -49,7 +49,24 @@ print({i:i*i for i in range(1,20)})
 
 print({code:chr(code)for code in range(0,100)})
 
-# 
+# list comprehensive style
+
+print([i for i in range(1,20)])
+print([i*i for i in range(1,11)])
+
+for row in range(1,11):
+    print(row, "*"*row)# pyramid print
+
+for row in range(1,27):
+    print(row, end="\t")
+    for c in range(65,65+row):
+        print(chr(c), end=" ")
+    print("")
+
+
+
+
+
 
 
       
