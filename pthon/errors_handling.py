@@ -213,3 +213,7 @@ try:
   print(s2=StudentCard(20,"ALI",78))
 except Exception as er:
     print("Something Wrong",er)
+
+
+import datetime as dt
+print(dt.datetime.now())
