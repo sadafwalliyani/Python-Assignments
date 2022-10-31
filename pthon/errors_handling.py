@@ -59,10 +59,46 @@ print("End Lines")
 
 print("Start Line")
 a=7
+b=2
+
+try:
+    print(a / b)
+except(ZeroDivisionError):
+    print("Ap kesi bhi value ko zero divide nhi kr sakty!")
+print("End Lines")
+
+print("Start")
+
+a = 7
+b = 0
+l = [1,2,3]
+
+try:
+#     print(a / b)
+    print(l[5])
+    open("abc.txt")
+except (ZeroDivisionError,IndexError,FileNotFoundError):
+    print("You write something wrong!")
+
+print("End")
+
+print("Start")
+
+a=7
 b=0
+l=[1,2,3]
 
 try:
     print(a/b)
 except(ZeroDivisionError):
-    print("Ap kesi bhi value ko zero divide nhi kr sakty!")
-print("End Lines")
+    print("Can't divide any number with zero")
+    
+try:
+    print(l[5])
+except(IndexError):
+    print("Index not available")
+
+try:
+    open("anc.txt")
+except (FileNotFoundError):
+    print("end")
