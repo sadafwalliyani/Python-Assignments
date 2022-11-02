@@ -74,3 +74,35 @@ def piaic_introduction1():
     """
     return txt
 print(piaic_introduction1()) #return function
+
+
+# required arguments
+def addition(num1, num2):
+    return num1+num2
+print(addition(7,20))
+print(addition(7,20000))
+print(addition(7,3000))
+print(addition(7,800))
+
+# OPTIONAL ARGUMENTS
+
+def addition(num1=0, num2=0):
+    return num1+num2
+
+print(addition())
+print(addition(1))
+print(addition(2,3))
+print(addition(10,30))
+
+# required and optional arguments
+
+def making_briyani(rice,meat,tomatoes="0.5 KG"):
+    txt=f"""
+    Boiling {rice} rice...
+    making qorma with {meat} meat...
+    mixing tomatos {tomatoes}...
+    now you enjoy briyani:)
+    """
+    return txt
+a = making_briyani("Sehla",'chiken')
+print(a)
