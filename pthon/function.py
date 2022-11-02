@@ -186,5 +186,26 @@ def student_card(rollnum, name, fname, course):
     return card
 
 print(student_card(1, "sadaf","Mansoor", "AI"))
-print(student_card(1, "sadaf","Mansoor", "CNC"))
-print(student_card(1, "sadaf","Mansoor", "BLOCK CHAIN"))
+print(student_card(2,'Hamza',"Abid","AI"))
+print(student_card(3,'Konain',"Rashid","AI"))
+
+
+stucard=[1,"Muhammad Qasim","Muhammad Aslam","AI"]
+print(student_card(*stucard))
+
+dic = {"name":"Muhammad Qasim",
+     "fname":"Muhammad Aslam",
+     "rollnum":123,
+     "course":"AI"}
+     
+print(student_card(**dic))
+
+
+
+print(student_card(name="Muhammad Qasim",
+                  fname="Muhammmad Aslam",
+                  rollnum=123,
+                  course="AI"))
+
+
+#create keyword argument unlimited
