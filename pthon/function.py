@@ -106,3 +106,33 @@ def making_briyani(rice,meat,tomatoes="0.5 KG"):
     return txt
 a = making_briyani("Sehla",'chiken')
 print(a)
+print(a)
+print(a)
+
+print(print("Pakistan"))
+print(making_briyani("Basmati","Beaf","1 KG"))
+
+
+# optional argument2 unlimited
+
+def my_sum(num1, *num): #*num
+    print(num1,num)
+    return num1+sum(num)
+my_sum(10,2,2,2,2,2,2)
+
+
+import numpy as np
+num=np.array((2,2,2,2,2))
+print(2+num)
+
+def my_sum(num1,*num):
+    print(num1,num)
+
+    result = num1
+
+    for n in num:
+        result +=n
+
+        return result
+
+print(my_sum(7,2,2,3,4,5))
