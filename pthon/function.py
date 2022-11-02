@@ -163,3 +163,28 @@ print(1,20,30,50,100)
 print(l)
 
 print(my_sum(*l))
+
+def my_new_sum(num1,num2,num3,num4):
+    return num1 + num2 + num3 + num4
+
+l = [10,20,30,40]
+
+# my_new_sum(*l)
+# my_new_sum(l[0],l[1],l[2],l[3])
+my_new_sum(50,l[0],*l[-2:])
+
+#calling function with keyword arguments
+
+def student_card(rollnum, name, fname, course):
+    card=f"""
+    PIAIC STUDENT IDENTITY CARD
+    Roll No      : {rollnum}
+    Name         : {name}
+    Father's Name: {fname}
+    Course       : {course} 
+    """
+    return card
+
+print(student_card(1, "sadaf","Mansoor", "AI"))
+print(student_card(1, "sadaf","Mansoor", "CNC"))
+print(student_card(1, "sadaf","Mansoor", "BLOCK CHAIN"))
