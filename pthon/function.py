@@ -125,7 +125,8 @@ import numpy as np
 num=np.array((2,2,2,2,2))
 print(2+num)
 
-def my_sum(num1,*num):
+
+def my_sum(num1,*num): # unlimited num/parameters can take
     print(num1,num)
 
     result = num1
@@ -136,3 +137,29 @@ def my_sum(num1,*num):
         return result
 
 print(my_sum(7,2,2,3,4,5))
+
+def my_sum(num1,num2,*num): # *num 
+    print(num1,num2,num)
+    return num1 + num2 +sum(num)
+
+print(my_sum(7,2,2,3,4,5))
+
+
+def my_sum(*num): # *num during define = tuple
+    print(num)
+    return sum(num)
+print(
+my_sum(7,2,2,3,4,5))
+
+
+a, b=[20,25,] # unzip
+print(a)
+print(b)
+
+l = [1,20,30,50,100]
+print(l[0],l[1],l[2],l[3],l[4])
+print(*l) #during call * before iterated datatype = unzip values
+print(1,20,30,50,100)
+print(l)
+
+print(my_sum(*l))
