@@ -16,4 +16,10 @@ and they lived at the bottom of a well.</p>
 soup = BeautifulSoup(html_doc, 'html.parser')
 
 # print(soup.prettify())
-print(soup.title())
+print(soup.title)
+print(soup.title.text)
+print(soup.find_all("p"))
+print([i.text for i in soup.find_all("p")])
+
+print(soup.p['class'])
+print(soup.find_all("a"))
