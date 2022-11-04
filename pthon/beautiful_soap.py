@@ -1,6 +1,7 @@
-from bs4 import BeautifulStoneSoup
+from bs4 import BeautifulSoup
 
-html_doc = """<html><head><title>The Dormouse's story</title></head>
+html_doc = """<html><head><title>
+The Dormouse's story</title></head>
 <body>
 <p class="title"><b>The Dormouse's story</b></p>
 
@@ -12,4 +13,7 @@ and they lived at the bottom of a well.</p>
 
 <p class="story">...</p>"""
 
-soup=BeautifulStoneSoup(html_doc,'html.parser')
+soup = BeautifulSoup(html_doc, 'html.parser')
+
+# print(soup.prettify())
+print(soup.title())
