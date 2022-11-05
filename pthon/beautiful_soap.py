@@ -23,3 +23,6 @@ print([i.text for i in soup.find_all("p")])
 
 print(soup.p['class'])
 print(soup.find_all("a"))
+
+for link in soup.find_all('a'):
+    print(link.get('href'))
