@@ -38,8 +38,6 @@
 # c = Child
 
 
-
-
 class Father():
     def __init__(self,name):
         self.name = name
@@ -57,9 +55,11 @@ class Mother():
         self.color = 'white'
         
     def slient(self):
-        return "..."
-    
+         return "..."
 class Child(Father,Mother):
-    pass
-
-print()
+    def __init__(self, name):
+        super().__init__(name)
+        return
+pass
+c=Child
+print(c)
