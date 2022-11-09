@@ -71,23 +71,63 @@ Python
         >always keep this during creating time
         >but always ingore during calling
         > always manage each object with individual memory blocks
-self
-this
-abc
-xyz
-all attribute should be write in constructor body
-self.attribute_name (within a class)
-destructor (method)
+            -self
+            -this
+            -abc
+            -xyz
+> all attribute should be write in constructor body
+    -self.attribute_name (within a class)
+    -destructor (method)
+    -always call when we delete object
+> Method
+    -def method_name(self,arg1,arg2,..):pass
+    -calling time method_name(arg1,arg2)
+        -always ignore self
+>object action performed
+    -always return something or change some attribute value
 
-always call when we delete object
-Method
-
-def method_name(self,arg1,arg2,..):pass
-calling time method_name(arg1,arg2)
-always ignore self
-object action performed
-always return something or change some attribute value
-Attribute
-
-class variable
+>Attribute
+>class variable
 """
+
+class Student(): # class
+    def __init__(self, sid, sname): # constructor method
+        #self.attribute_name = constructor_local_variable
+        self.id = sid 
+        self.name = sname # attribute
+        self.education = None # attribute
+        self.address = None # attribute
+        self.age = None # attribute
+        self.user = sname
+        self.password = "123"
+    
+    def login(self,user,pws): # Method
+        if self.user == user and self.password == pws:
+            return "Valid User"
+        else:
+            return "Not Valid user"
+        
+    def display_information(self): # method
+        cards = f"""
+        PIAIC Student Card
+        Registration No: {self.id}
+        Name: {self.name}
+        Education : {self.education}
+        """
+        
+        return cards
+
+# calling a class
+    # ClassName(arg1,arg2,..) 
+    # we ignore slef argument calling time
+
+s1 = Student(1,"Muhammad Qasim") # create s1 new object
+s2 = Student(2,"Asim")           # create s2 new object
+s3 = Student(3,"Asif Khan")      # create s3 new object
+s4 = Student(4,"Konain")
+s5 = Student(5,"Kamran")
+
+print(s1.name, s1.id) # call attributes values
+print(s2.name, s2.id) # object_name.attribute
+print(s3.name, s3.id)
+print(s5.name, s5.id)
