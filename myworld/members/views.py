@@ -27,6 +27,8 @@ def index(request):
   #   output += x["firstname"]
   # return HttpResponse(output)
 
-
+def add(request):
+  template = loader.get_template('add.html')
+  return HttpResponse(template.render({},request))
 
   
