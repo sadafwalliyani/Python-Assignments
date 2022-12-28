@@ -1,3 +1,7 @@
 The total price for all customer is: 30.0 $
 The total price for all customer is: 10.0 $
 The total price for all customer is: 100.0 $
+The total price for all customer is: 19.0 $
+The total price for all customer is: 114.0 $
+The total price for all customer is: 70.0 $
+The total price for all customer is: 300.0 $

@@ -266,7 +266,114 @@ window = sg.Window('Shopping List', layout)
     # Finish up by removing from the screen
 window.close()
         
+# Define the columns of the table
+table_columns = ['Name', 'City', 'Neighborhood', 'Item', 'Price']
+
+# Create an empty table with the defined columns
+table = sg.Table(values=[['']*len(table_columns)], headings=table_columns, max_col_width=25, auto_size_columns=True,
+                justification='center', alternating_row_color='lightblue', size=(None, None), key='TABLE')
+
+# Add the table to the layout
+layout = [    [sg.Text(size=(20,1), text="Customer Number"), sg.Input(key='IN_CUST_NUM', size=(40,1))],
+    [sg.Text(size=(20,1), text="Customer Name"), sg.Input(key='IN_CUST_NAME', size=(40,1))],
+    [sg.Text(size=(20,1), text="City"), sg.Input(key='IN_CUST_CITY', size=(40,1))],
+    [sg.Text(size=(20,1), text="Neighborhood"), sg.Input(key='IN_CUST_NEI', size=(40,1))],
+    [sg.Text(size=(20,1), text="Item"), sg.Input(key='IN_ITEM', size=(40,1))],
+    [sg.Text(size=(20,1), text="Price"), sg.Input(key='IN_PRICE', size=(40,1))],
+    [sg.Button('Add Item'), sg.Button('Remove Item'), sg.Button('Save'), sg.Button('Print')],
+    [table],
+    [sg.Text(size=(20,1), text="Total Paid Amount"), sg.Text(key='TOTAL_PAID_AMOUNT', size=(40,1))]
+]
+
+# Create the window
+window = sg.Window('Shopping List', layout)
+def update_table(customer_number):
+    # Retrieve the customer information
+    customer_dict = {1: customer1, 2: customer2, 3: customer3, 4: customer4, 5: customer5}
+    chosen_customer = customer_dict[customer_number]
+
+    # Create a list of rows for the table
+    table_rows = []
+    for item in chosen_customer.items_list:
+        table_rows.append([chosen_customer.name, chosen_customer.address[0], chosen_customer.address[1], item[0], item[1]])
+
+    # Update the table with the customer information
+    window.update(TABLE=table_rows)
+def save_customer_info_for_print(customer_number):
+    customer_dict = {1: customer1, 2: customer2, 3: customer3, 4: customer4, 5: customer5}
+    chosen_customer = customer_dict[customer_number]
+
+    # Create a file with the customer number as the filename
+    filename = f"customer_{customer_number}.txt"
+    with open(filename, "w") as f:
+        # Write the customer name to the file
+        f.write(f"Customer Name: {chosen_customer.name}\n")
+        # Write the customer address to the file
+        f.write(f"Customer Address: {chosen_customer.address[0]}, {chosen_customer.address[1]}\n")
+        # Write the customer's shopping list to the file
+        f.write("Shopping List:\n")
+        for item in chosen_customer.items_list:
+            f.write(f" - {item[0]}: ${item[1]}\n")
+        # Write the total paid amount to the file
+        f.write(f"Total Paid Amount: ${chosen_customer.get_total_price()}\n")
+
+# Call the save_customer_info_for_print function when the "Print" button is clicked
+
     
+from reportlab.pdfgen import canvas
+
+def save_customer_info_for_print(customer_number):
+    customer_dict = {1: customer1, 2: customer2, 3: customer3, 4: customer4, 5: customer5}
+    chosen_customer = customer_dict[customer_number]
+
+    # Create a PDF file with the customer number as the filename
+    filename = f"customer_{customer_number}.pdf"
+    c = canvas.Canvas(filename)
+
+    # Set the font and font size for the text
+    c.setFont('Helvetica', 12)
+
+    # Write the customer name to the PDF file
+    c.drawString(50, 750, f"Customer Name: {chosen_customer.name}")
+    # Write the customer address to the PDF file
+    c.drawString(50, 730, f"Customer Address: {chosen_customer.address[0]}, {chosen_customer.address[1]}")
+    # Write the customer's shopping list to the PDF file
+    c.drawString(50, 710, "Shopping List:")
+    y_pos = 690
+    for item in chosen_customer.items_list:
+        c.drawString(70, y_pos, f" - {item[0]}: ${item[1]}")
+        y_pos -= 20
+    # Write the total paid amount to the PDF file
+    c.drawString(50, y_pos, f"Total Paid Amount: ${chosen_customer.get_total_price()}")
+
+    # Save the PDF file
+    c.save()
+
+# Call the save_customer_info_for_print function when the "Print" button is clicked
+# if event == "Print":
+#     customer_number = values["IN_CUST_NUM"]
+#     save_customer_info_for_print(customer_number)
+while True:
+    # Wait for an event to occur
+    event, values = window.read()
+
+    # Exit the event loop if the window is closed
+    if event in (None, 'Exit'):
+        break
+
+    # Perform some action based on the event
+    if event == 'Save':
+        # Save customer info to a CSV file
+        SaveCustomerInfo(values['-FOLDER-'])
+        # Play a sound to indicate that the customer info has been saved
+        # sound.play()
+    elif event == "Print":
+        customer_number = values["IN_CUST_NUM"]
+        save_customer_info_for_print(customer_number)
+
+# Close the window
+window.close()
+
 
 main()
 
