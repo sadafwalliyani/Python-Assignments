@@ -232,6 +232,30 @@ def main():
             sg.cprint("total customer money paid is: "+str(all_customer_total_prices)+"\n")
             print("The total price for all customer is:", all_customer_total_prices, "$", file=f)
             f.close()
+    
+    # adding my code
+    # Define the columns of the table
+table_columns = ['Name', 'City', 'Neighborhood', 'Item', 'Price']
+
+# Create an empty table with the defined columns
+table = sg.Table(values=[['']*len(table_columns)], headings=table_columns, max_col_width=25, auto_size_columns=True,
+                justification='center', alternating_row_color='lightblue', size=(None, None), key='TABLE')
+
+# Add the table to the layout
+layout = [    [sg.Text(size=(20,1), text="Customer Number"), sg.Input(key='IN_CUST_NUM', size=(40,1))],
+    [sg.Text(size=(20,1), text="Customer Name"), sg.Input(key='IN_CUST_NAME', size=(40,1))],
+    [sg.Text(size=(20,1), text="City"), sg.Input(key='IN_CUST_CITY', size=(40,1))],
+    [sg.Text(size=(20,1), text="Neighborhood"), sg.Input(key='IN_CUST_NEI', size=(40,1))],
+    [sg.Text(size=(20,1), text="Item"), sg.Input(key='IN_ITEM', size=(40,1))],
+    [sg.Text(size=(20,1), text="Price"), sg.Input(key='IN_PRICE', size=(40,1))],
+    [sg.Button('Add Item'), sg.Button('Remove Item'), sg.Button('Save'), sg.Button('Print')],
+    [table],
+    [sg.Text(size=(20,1), text="Total Paid Amount"), sg.Text(key='TOTAL_PAID_AMOUNT', size=(40,1))]
+]
+
+# Create the window
+window = sg.Window('Shopping List', layout)
+
 
             
         # Output a message to the window
@@ -240,8 +264,9 @@ def main():
         #window['-OUTPUT-'].update('Hello ' + values['-INPUT-'] + "! Thanks for trying PySimpleGUI")
 
     # Finish up by removing from the screen
-    window.close()
+window.close()
         
     
 
 main()
+
