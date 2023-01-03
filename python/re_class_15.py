@@ -69,3 +69,11 @@ We love pakistan
 m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
 # print(n)
 print(m)
+
+# * and +
+#vl means variables
+vl= "abc aaa abd jfnrejfb xyz dnsdn aaaaa"
+vl1=re.findall("a+", vl)
+vl2=re.findall("a*", vl)
+print(vl1)
+print(vl2)
