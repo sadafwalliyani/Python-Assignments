@@ -51,3 +51,21 @@ everyone can live in pakistan
 print(re.findall(r"^pakistan",x))# whole variable consider signle value
 
 # ^ and $
+x="""
+Pakistan zinda abad
+Pakistan is my country
+We love pakistan
+Pakistan zinda abad
+Pakistan is my country
+We love pakistanPakistan zinda abad
+Pakistan is my country
+We love pakistan
+"""
+# ^ means  starting line character
+# * repeat sequence 
+# . means any character except \n
+
+# n=re.findall(".",x)
+m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
+# print(n)
+print(m)
