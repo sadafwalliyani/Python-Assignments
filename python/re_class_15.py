@@ -70,10 +70,13 @@ m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
 # print(n)
 print(m)
 
-# * and +
+# * means 0 or no/null and + lazmi repeat 
 #vl means variables
 vl= "abc aaa abd jfnrejfb xyz dnsdn aaaaa"
 vl1=re.findall("a+", vl)
 vl2=re.findall("a*", vl)
 print(vl1)
+print(vl2)
+
+print(vl2)
 print(vl2)
