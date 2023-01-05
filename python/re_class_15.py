@@ -60,23 +60,27 @@ Pakistan is my country
 We love pakistanPakistan zinda abad
 Pakistan is my country
 We love pakistan
+name: Muhammad Qasim
+father's Name: Muhammad Aslam
+education: MSDS
+age : 30
 """
-# ^ means  starting line character
-# * repeat sequence 
-# . means any character except \n
+res=re.findall(r'age  : 30',x) #want to extract 30 -> ()
+print(res)
+# # ^ means  starting line character
+# # * repeat sequence 
+# # . means any character except \n
 
-# n=re.findall(".",x)
-m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
-# print(n)
-print(m)
+# # n=re.findall(".",x)
+# m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
+# # print(n)
+# print(m)
 
-# * means 0 or no/null and + lazmi repeat 
-#vl means variables
-vl= "abc aaa abd jfnrejfb xyz dnsdn aaaaa"
-vl1=re.findall("a+", vl)
-vl2=re.findall("a*", vl)
-print(vl1)
-print(vl2)
+# # * means 0 or no/null and + lazmi repeat 
+# #vl means variables
+# vl= "abc aaa abd jfnrejfb xyz dnsdn aaaaa"
+# vl1=re.findall("a+", vl)
+# vl2=re.findall("a*", vl)
+# print(vl1)
+# print(vl2)
 
-print(vl2)
-print(vl2)
