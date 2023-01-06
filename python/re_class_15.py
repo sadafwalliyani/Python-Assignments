@@ -51,7 +51,7 @@ everyone can live in pakistan
 print(re.findall(r"^pakistan",x))# whole variable consider signle value
 
 # ^ and $
-x="""
+y="""
 Pakistan zinda abad
 Pakistan is my country
 We love pakistan
@@ -65,22 +65,35 @@ father's Name: Muhammad Aslam
 education: MSDS
 age : 30
 """
-res=re.findall(r'age  : 30',x) #want to extract 30 -> ()
+res=re.findall(r'age : (30)',y)# want to extract 30 -> ()
 print(res)
-# # ^ means  starting line character
-# # * repeat sequence 
-# # . means any character except \n
+# ^ means  starting line character
+# * repeat sequence 
+# . means any character except \n
 
-# # n=re.findall(".",x)
-# m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
-# # print(n)
-# print(m)
+# n=re.findall(".",x)
+m=re.findall(r"^Pakistan.*",x,re.MULTILINE)
+# print(n)
+print(m)
 
-# # * means 0 or no/null and + lazmi repeat 
-# #vl means variables
-# vl= "abc aaa abd jfnrejfb xyz dnsdn aaaaa"
-# vl1=re.findall("a+", vl)
-# vl2=re.findall("a*", vl)
-# print(vl1)
-# print(vl2)
+# * means 0 or no/null and + lazmi repeat 
+#vl means variables
+vl= "abc aaa abd jfnrejfb xyz dnsdn aaaaa"
+vl1=re.findall("a+", vl)
+vl2=re.findall("a*", vl)
+print(vl1)
+print(vl2)
+
+data1="""
+name: Muhammad Qasim
+father's Name: Muhammad Aslam
+education: MSDS
+age : 115
+age : 2
+cnic : 1234567891234
+"""
+resd1=re.findall(r'age : (\d+)',data1)# want to extract 30 -> ()
+                           # \d = number + repeatation two people age
+print(resd1)
+
 
