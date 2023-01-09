@@ -36,3 +36,17 @@ print(f.readline())
 print(f.readline())
 print(f.readline())
 print(f.readline())
+
+# Loop through the file line by line:
+f= open("demofile.txt","r")
+for x in f:
+    print(x)
+
+"""Close Files
+It is a good practice to always 
+close the file when you are done with it."""
+
+print(f.readline())
+f.close()
+
+
