@@ -96,4 +96,3 @@ resd1=re.findall(r'age : (\d+)',data1)# want to extract 30 -> ()
                            # \d = number + repeatation two people age
 print(resd1)
 
-
