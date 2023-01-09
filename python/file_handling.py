@@ -27,3 +27,12 @@ print(f.read())
 
 # Return the 5 first characters of the file:
 print(f.read(3))
+
+# Read one line of the file:
+f= open("demofile.txt", "r")
+print(f.readline())
+
+# Read two lines of the file:
+print(f.readline())
+print(f.readline())
+print(f.readline())
