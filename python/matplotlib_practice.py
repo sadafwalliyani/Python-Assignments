@@ -24,7 +24,13 @@ import numpy as np
 # Draw two points in the diagram, one 
 # at position (1, 3) and one in position (8, 10):
 
-xpoin= np.array([1,8])
-ypoin=np.array([3,10])
-plt.plot(xpoin,ypoin, 'o')
+# xpoin= np.array([1,8])
+# ypoin=np.array([3,10])
+# plt.plot(xpoin,ypoin, 'o')
+# print(plt.show())
+
+xpoints = np.array([1, 2, 3, 4, 5])
+ypoints = np.array([2, 3, 7, 3, 8])
+
+plt.plot(xpoints, ypoints)
 print(plt.show())
