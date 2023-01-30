@@ -13,9 +13,9 @@ print(10*5)
 print(10/5)
 
 
-#Pre defined functions in Python
+"""#Pre defined functions in Python
 # print()
-# type()
+# type()"""
 name= "Sadaf"
 print(type(name)) # data type 
 # id()
