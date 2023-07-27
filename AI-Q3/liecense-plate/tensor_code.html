@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.15.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <button onclick="runTensorFlowCode()">Run TensorFlow Code</button>
+  <div id="output"></div>
+
+  <script>
+    function runTensorFlowCode() {
+      // TensorFlow code here
+      tf.setBackend('cpu');
+      async function run() {
+        const model = await tf.loadLayersModel('keras_Model/model.json');
+        const class_names = await fetch('labels.txt')
+          .then(response => response.text())
+          .then(text => text.split('\n'));
+        
+        const data = tf.zeros([1, 224, 224, 3]);
+
+        const imgElement = document.createElement('img');
+        imgElement.src = '<IMAGE_PATH>';
+
+        await imgElement.decode();
+
+        const canvas = document.createElement('canvas');
+        canvas.width = 224;
+        canvas.height = 224;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgElement, 0, 0, 224, 224);
+        const imageData = ctx.getImageData(0, 0, 224, 224);
+        const input = tf.browser.fromPixels(imageData).toFloat();
+        const normalizedInput = input.div(tf.scalar(255)).expandDims();
+        
+        data[0] = normalizedInput;
+
+        const prediction = model.predict(data);
+        const index = prediction.argMax(1).dataSync()[0];
+        const class_name = class_names[index];
+        const confidence_score = prediction.dataSync()[index];
+
+        const outputElement = document.getElementById('output');
+        outputElement.innerText = `Class: ${class_name.substring(2)}\nConfidence Score: ${confidence_score}`;
+
+        prediction.dispose();
+        model.dispose();
+      }
+
+      run();
+    }
+  </script>
+</body>
+</html>
