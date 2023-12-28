@@ -1,1 +1,0 @@
-hf_api_key = os.environ.get('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')
